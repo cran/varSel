@@ -17,10 +17,9 @@ A list containing a matrix of the class combinations and a vector of the JM dist
 \description{
 Jeffries-Matusita distance.
 }
-\author{
-Michele Dalponte and Hans Ole Oerka
-}
 \references{
 Dalponte, M., Oerka, H.O., Gobakken, T., Gianelle, D. & Naesset, E. (2013). Tree Species Classification in Boreal Forests With Hyperspectral Data. IEEE Transactions on Geoscience and Remote Sensing, 51, 2632-2645.
 }
-
+\author{
+Michele Dalponte and Hans Ole Oerka
+}

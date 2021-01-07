@@ -4,7 +4,9 @@
 \name{dat}
 \alias{dat}
 \title{Hyperspectral data acquired over a forest area}
-\format{A data frame with 3230 rows and 66 variables}
+\format{
+A data frame with 3230 rows and 66 variables
+}
 \usage{
 data(dat)
 }
@@ -18,4 +20,3 @@ A dataset containing 3230 samples with 65 hyperspectral bands and 8 classes.
 }
 }
 \keyword{datasets}
-

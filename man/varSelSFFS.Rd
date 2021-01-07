@@ -4,7 +4,7 @@
 \alias{varSelSFFS}
 \title{Sequential Forward Floating Selection using Jeffries-Matusita Distance}
 \usage{
-varSelSFFS(g, X, strategy = "mean")
+varSelSFFS(g, X, strategy = "mean", n = ncol(X))
 }
 \arguments{
 \item{g}{A column vector of the lables. length(g) is equal to nrow(X).}
@@ -12,6 +12,8 @@ varSelSFFS(g, X, strategy = "mean")
 \item{X}{A dataframe of the features. ncol(X) is equal to the total number of features, and nrow(X) is equal to the number of avaialble training samples. nrow(X) is equal to length(g)}
 
 \item{strategy}{string indicating the multiclass strategy to adopt: 'minimum' or 'mean'.}
+
+\item{n}{integer indicating the number of features to select. The algorithm will stop at n+1 features selected.}
 }
 \value{
 A list containing a vector of the JM distances on the individual bands, a matrix with the set of features selected, and a vector containing the distances for each feature set from 1 to N-1, where N is equal to ncol(X).
@@ -23,15 +25,14 @@ Feature selection using the Sequential Forward Floating Selection search strateg
 \dontrun{
 data(dat)
 
-se<-varSelSFFS(g=dat$SP,X=dat[,c(1:65)],strategy="mean")
+se<-varSelSFFS(g=dat$SP,X=dat[,c(1:65)],strategy="mean",n=4)
 summary(se)
 
 }
 }
-\author{
-Michele Dalponte and Hans Ole Oerka
-}
 \references{
 Dalponte, M., Oerka, H.O., Gobakken, T., Gianelle, D. & Naesset, E. (2013). Tree Species Classification in Boreal Forests With Hyperspectral Data. IEEE Transactions on Geoscience and Remote Sensing, 51, 2632-2645.
 }
-
+\author{
+Michele Dalponte and Hans Ole Oerka
+}
